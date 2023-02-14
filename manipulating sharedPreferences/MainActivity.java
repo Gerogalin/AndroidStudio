@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.textView);
         editText = findViewById(R.id.editText);
     }
-        public void buttonPut(View view){
+        public void button(View view){
             SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putString("stringProgrammingWorld", "This is programmingworld");
             editor.apply();
         }
-        public void buttonGet(View view){
+        public void button3(View view){
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
         String stringSharedPref_UserData = sharedPreferences.getString("StringUserData",null);
         String stringSharedPref_PWorld = sharedPreferences.getString("StringProgrammingWorld",null);
@@ -43,11 +43,11 @@ public class MainActivity extends AppCompatActivity {
             textView.setText(stringSharedPref_PWorld+"\n"+stringSharedPref_UserData);
         }
         }
-        public void buttonDeleteAll(View view){
+        public void button4(View view){
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
         sharedPreferences.edit().clear().commit();
         }
-        public void buttonDelete(View view){
+        public void button5(View view){
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
         sharedPreferences.edit().remove("stringUserData").commit();
         }

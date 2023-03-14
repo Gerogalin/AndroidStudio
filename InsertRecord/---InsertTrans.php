@@ -13,7 +13,20 @@
       
       $response ["message"] = "Database error, Please Try Again!". $sql;
       die(json_encode($response));
+      }else{
+        $response["success"] = 0;
+        $response["message"] = "Database error, Please try again!" .$sql;
+        die(json_encode($response));
       }
      }
     }
       catch (Exception $e) {
+          $response["success"] = 0;
+          $response["message"] = "Database error. Please Try again!" . $sql;
+          die(json_encode($response));
+        }
+        $response["success"] = 1;
+        $response["message = " DATA -> " .$select_sql;
+        $response["message"] = " Record saved. ":
+        die(json_encode($response));
+        ?>
